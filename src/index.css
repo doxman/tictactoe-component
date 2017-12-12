@@ -1,0 +1,149 @@
+.tictactoe-centered {
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+}
+
+.tictactoe-text-component {
+  font: 16px Verdana, Arial, sans-serif;
+}
+
+.tictactoe-flex-container {
+  display: flex;
+}
+
+.tictactoe-bottom-gap-normal {
+  margin-bottom: 10px;
+}
+
+.tictactoe-bottom-gap-large {
+  margin-bottom: 20px;
+}
+
+.tictactoe-bottom-gap-small {
+  margin-bottom: 5px;
+}
+
+.tictactoe-left-indented-btn {
+  margin-left: 10px;
+}
+
+.tictactoe-move-shift-btn, .tictactoe-single-digit-pair::before {
+  margin-right: 10px;
+}
+
+.tictactoe-rounded-input {
+  border-radius: 8px;
+}
+
+.tictactoe-move-shift-btn {
+  width: 35px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tictactoe-move-shift-btn:disabled {
+  opacity: 0.5;
+}
+
+.tictactoe-move-shift-btn:hover {
+  background-color: rgb(214, 214, 214);
+}
+
+.tictactoe-no-outline:focus {
+  outline: none;
+}
+
+.tictactoe-no-outline::-moz-focus-inner {
+  border: none;
+}
+
+[name="tictactoe-board-size"] {
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 28px;
+}
+
+.tictactoe-board {
+  flex-direction: column;
+  align-items: center;
+}
+
+.tictactoe-square {
+  background: #fff;
+  border: 1px solid #999;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.tictactoe-square.tictactoe-highlighted {
+  background: yellow;
+}
+
+.tictactoe-game-status {
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.tictactoe-win-status {
+  background: limegreen;
+}
+
+.tictactoe-tie-status {
+  background: aqua;
+}
+
+.tictactoe-next {
+  background-image: url(./assets/next-arrow.svg);
+}
+
+.tictactoe-prev {
+  background-image: url(./assets/prev-arrow.svg);
+}
+
+.tictactoe-game-moves {
+  counter-reset: moves;
+  border: 2px solid green;
+  border-radius: 5px;
+  padding: 5px;
+  overflow-y: auto;
+  max-height: 184px;
+  max-width: 192px;
+  display: block;
+}
+
+.tictactoe-move-pair::before {
+  counter-increment: moves;
+  content: counter(moves) ".";
+  margin-top: 2px;
+}
+
+.tictactoe-right-move-column {
+  margin-right: 36px;
+}
+
+.tictactoe-current-step {
+  font-weight: bold;
+}
+
+.tictactoe-footer-text {
+  font: 12px "Times New Roman", serif;
+}
+
+.tictactoe-no-select {
+  user-select: none;
+}
+
+@-moz-document url-prefix() {
+  .tictactoe-game-moves {
+    max-width: 252px;
+  }
+}
